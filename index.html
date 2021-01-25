@@ -1,13 +1,43 @@
 <html>
     <head>
+        <style>
+            body {background-color: lightgray;}
+            a:hover {
+                color:red;
+                font-size: 3cm;
+            }
+            .headline{
+                text-decoration: underline;
+            }
+            #users-list {
+                list-style-type: square;
+                background: lightslategray;
+                
+            }
+            #users-table{
+                margin: auto;
+                width: 100%;
+                background: lightslategray;
+            }
+            #users-table th{
+                padding: 2px;
+            }
+            #users-table td{
+                text-align: center;
+            }
+            #users-table td:nth-child(3){
+                background: lightgrey;
+            }
+        </style>
         <meta charset="utf-8">
         <tiltle>This is my first HTML project.</tiltle>
     </head>
     <body>
-        <h1>Buy some coffee!</h1> 
+        <h1 class="headline">Coffee shop</h1> 
+
         <img src="coffee-.jpg"alt="My test image">
-        <h2>Available coffees:</h2>
-        <ul>
+        <h2 class="headline">Available coffees:</h2>
+        <ul id="users-list">
             <li>Latte</li>
                 <ul>
                     <li>Lactose free</li>
@@ -17,7 +47,8 @@
             <li>Espresso</li>
             <li>Doppio</li>
         </ul>
-        <table border ="5" cellpadding = "10" cellspacing="0">
+        <h2 class="headline">Price list:</h2>
+        <table id="users-table" border ="5" cellpadding = "10" cellspacing="0">
             <tr>
                 <th>Coffee</th>
                 <th>Price</th>
@@ -50,5 +81,14 @@
             </tr>
 
         </table>
+        <p>More information: <a href="korpialhosari@gmail.com">Email</a></p>
+        
+        <h2 class="headline">Contact request:</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id=name name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id=email name="email"><br>
+        </form>
     </body>
 </html>
